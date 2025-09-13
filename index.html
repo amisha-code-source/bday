@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-birthday-cake"></i>
+                <span>Mom's Birthday</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+                <li><a href="#wishes" class="nav-link" data-section="wishes">Wishes</a></li>
+                <li><a href="#surprise" class="nav-link" data-section="surprise">Surprise</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-birthday-cake"></i>
+                Happy Birthday Mom! 🎉
+            </h1>
+            <p class="subtitle">Celebrating the most amazing woman in our lives!</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="home-content">
+                    <div class="home-hero">
+                        <h2>Happy Birthday, Mom! 🎂</h2>
+                        <p class="home-subtitle">Today we celebrate the most wonderful woman in our lives</p>
+                        <div class="home-features">
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <h3>Unconditional Love</h3>
+                                <p>Your love knows no bounds</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star"></i>
+                                <h3>Endless Support</h3>
+                                <p>Always there when we need you</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-smile"></i>
+                                <h3>Pure Joy</h3>
+                                <p>You bring happiness to everyone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <div class="about-content">
+                    <h2>About Mom</h2>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h3>Our Amazing Mom</h3>
+                            <p>Mom, you are the heart and soul of our family. Your strength, wisdom, and unconditional love have shaped us into who we are today. Every day with you is a gift, and today we celebrate all the wonderful memories we've shared together.</p>
+                            <p>From your warm hugs to your wise advice, from your delicious cooking to your infectious laughter - you make our world a better place. Thank you for being the incredible woman you are!</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span class="stat-number">365</span>
+                                <span class="stat-label">Days of Love</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-hands-helping"></i>
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">Times You've Helped</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-smile-beam"></i>
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Happiness You Bring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="content-section">
+                <div class="gallery-content">
+                    <h2>Mom's Gallery</h2>
+                    <p class="gallery-subtitle">Beautiful moments with our amazing mom</p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="mom5.jpg" alt="Mom Photo 5" onerror="this.style.display='none'">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="mom6.jpg" alt="Mom Photo 6" onerror="this.style.display='none'">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="mom2.jpg" alt="Mom Photo 2" onerror="this.style.display='none'">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wishes Section -->
+            <section id="wishes" class="content-section">
+                <!-- Public Wish Form Section -->
+                <div class="wish-form-section">
+                    <div class="form-container">
+                        <h2>Send Mom a Birthday Wish</h2>
+                        <p class="form-description">Share your love and birthday wishes for mom</p>
+                        <form id="wishForm" class="wish-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="wish">Your Birthday Wish</label>
+                                <textarea id="wish" name="wish" required placeholder="Write your birthday wish for mom here..." rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-heart"></i>
+                                Send Wish to Mom
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Admin Login Button (Small Floating Button) -->
+                <button id="adminLoginBtn" class="admin-login-btn">
+                    <i class="fas fa-lock"></i>
+                </button>
+
+                <!-- Admin Login Section (Hidden by default) -->
+                <div id="adminLoginSection" class="admin-login-section" style="display: none;">
+                    <div class="login-container">
+                        <h2><i class="fas fa-lock"></i> Admin Login</h2>
+                        <p>Enter admin credentials to view birthday wishes</p>
+                        <form id="adminLoginForm" class="admin-login-form">
+                            <div class="form-group">
+                                <label for="adminPassword">Admin Password</label>
+                                <input type="password" id="adminPassword" name="password" required placeholder="Enter admin password">
+                            </div>
+                            <button type="submit" class="login-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login as Admin
+                            </button>
+                        </form>
+                        <button id="closeLoginBtn" class="close-login-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Admin Panel (hidden by default) -->
+                <div id="adminPanel" class="admin-panel" style="display: none;">
+                    <div class="admin-header">
+                        <h2><i class="fas fa-user-shield"></i> Admin Panel</h2>
+                        <div class="admin-controls">
+                            <button id="exportBtn" class="export-btn">
+                                <i class="fas fa-download"></i>
+                                Export
+                            </button>
+                            <button id="clearAllBtn" class="clear-btn">
+                                <i class="fas fa-trash-alt"></i>
+                                Clear All
+                            </button>
+                            <button id="refreshBtn" class="refresh-btn">
+                                <i class="fas fa-sync-alt"></i>
+                                Refresh
+                            </button>
+                            <button id="logoutBtn" class="logout-btn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </button>
+                            <button id="closeAdminBtn" class="close-admin-btn">
+                                <i class="fas fa-times"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span id="totalWishes">0</span>
+                            <span>Total Wishes</span>
+                        </div>
+                    </div>
+
+                    <div class="wishes-display-section">
+                        <h3>Birthday Wishes</h3>
+                        <div id="wishesContainer" class="wishes-container">
+                            <!-- Wishes will be dynamically loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Surprise Section -->
+            <section id="surprise" class="content-section">
+                <div class="surprise-content">
+                    <h2>Surprise for Mom! 🎁</h2>
+                    <p class="surprise-subtitle">Click the button below to see a special surprise</p>
+                    <button id="surpriseBtn" class="surprise-button">
+                        <i class="fas fa-gift"></i>
+                        Open Surprise
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Surprise Popup Modal -->
+        <div id="surpriseModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Happy Birthday Mom! 🎉</h2>
+                <div class="modal-gallery">
+                    <div class="modal-image-container">
+                        <img id="modalImage" src="mom4.jpg" alt="Mom Photo">
+                    </div>
+                    <div class="modal-message">
+                        <p>We love you so much, Mom! Thank you for everything you do for us. You are the most amazing woman in the world! 💕</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Background Music -->
+ <audio id="bgMusic" loop>
+    <source src="monica.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 🎉 Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <script src="script.js"></script>
+  <script>
+    let musicPlayed = false;
+
+    function toggleMusic() {
+      const audio = document.getElementById("bgMusic");
+      const btn = document.getElementById("musicBtn");
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "🔊";
+      } else {
+        audio.pause();
+        btn.textContent = "🔇";
+      }
+    }
+
+    document.body.addEventListener("click", () => {
+      if (!musicPlayed) {
+        document.getElementById("bgMusic").play().catch(() => {});
+        document.getElementById("musicBtn").textContent = "🔊";
+        musicPlayed = true;
+      }
+    }, { once: true });
+
+    function revealSurprise() {
+      const surprise = document.getElementById('surpriseContent');
+      surprise.classList.toggle('revealed');
+      const envelope = document.querySelector('.envelope');
+
+      if (surprise.classList.contains('revealed')) {
+        envelope.style.transform = "translateY(-10px) rotate(-2deg)";
+        envelope.style.backgroundImage = "linear-gradient(135deg, #f9d1d1 0%, #f4a7bb 70%)";
+
+        if (typeof confetti === "function") {
+          confetti({
+            particleCount: 200,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+        }
+      } else {
+        envelope.style.transform = "translateY(0) rotate(0)";
+        envelope.style.backgroundImage = "linear-gradient(135deg, #f9c6d1 0%, #f4a7bb 100%)";
+      }
+    }
+   </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
